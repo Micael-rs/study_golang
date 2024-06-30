@@ -3,12 +3,14 @@ package main
 import (
 	"fmt"
 	"study_golang/atividade"
+	"study_golang/atividade2"
 )
 
 func main() {
 
 	var valor1, valor2 int
 	var operacao = 1
+	var nome, email string
 
 	for operacao != 0 {
 
@@ -17,6 +19,8 @@ func main() {
 		fmt.Println("2-Subtração")
 		fmt.Println("3-Multiplicação")
 		fmt.Println("4-Divisão")
+		fmt.Println("5-Atividade 2")
+		fmt.Println("6-Cadastro")
 		fmt.Println("0-Sair")
 		fmt.Scanf("%d", &operacao)
 
@@ -57,6 +61,20 @@ func main() {
 			fmt.Scanf("%d", &valor2)
 
 			fmt.Println("Resultado: ", atividade.Divisao(valor1, valor2))
+
+		case 5:
+
+			fmt.Println(atividade2.Ponteiro())
+
+		case 6:
+
+			fmt.Println("Cadastro")
+			fmt.Println("Digite o nome:")
+			fmt.Scanf("%s", &nome)
+			fmt.Println("Digite o email:")
+			fmt.Scanf("%s", &email)
+
+			fmt.Println(atividade2.CriarUsuario(nome, email))
 
 		default:
 			fmt.Println("Seção encerrada.")
